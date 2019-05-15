@@ -5,7 +5,7 @@
       <div
         v-for="(color, key) in use"
         v-bind:key="key"
-        :style="{ backgroundColor: color }"
+        :style="{ backgroundColor: color, color: lightOrDark(color) === 'dark' ? 'white' : 'black' }"
         class="colors__item"
       >
         <div class="colors__name">{{key}}</div>
@@ -17,12 +17,24 @@
 </template>
 
 <script>
+import { lightOrDark } from "@/helpers";
+
 const colors = {
   "Light Blue": "#6dcff6", // Sky,
   "Baby Blue": "#2990e6",
   Blue: "#005baa", // Sea blue
   Red: "#be1e2d", // Coral, Lava,
-  Black: "#495662" // Ash
+  Black: "#000000",
+  White: "#ffffff",
+  "Dark Gray": "#495662", // Ash,
+  Orange: "#f79c34",
+  Green: "#7dc855",
+  Yellow: "#ffff00",
+  "Brown Red": "#af554c",
+  "Gray One": "#eeeeee",
+  "Gray Two": "#e1e8ee",
+  "Gray Three": "#dddddd",
+  "Gray Four": "#bdc6cf"
 };
 const getColor = function(name) {
   return { [name]: colors[name] };
@@ -38,9 +50,35 @@ export default {
           ...getColor("Red")
         },
         Type: {
-          ...getColor("Black")
+          ...getColor("Black"),
+          ...getColor("Dark Gray"),
+          ...getColor("Blue"),
+          ...getColor("Baby Blue")
+        },
+        Buttons: {
+          ...getColor("Orange"),
+          ...getColor("Blue"),
+          ...getColor("White")
+        },
+        Special: {
+          ...getColor("Brown Red"),
+          ...getColor("Yellow"),
+          ...getColor("Green")
+        },
+        "UI Elements": {
+          ...getColor("Black"),
+          ...getColor("Baby Blue"),
+          ...getColor("Blue"),
+          ...getColor("White"),
+          ...getColor("Gray One"),
+          ...getColor("Gray Two"),
+          ...getColor("Gray Three"),
+          ...getColor("Gray Four"),
+          ...getColor("Orange"),
+          ...getColor("Green")
         }
-      }
+      },
+      lightOrDark
     };
   }
 };
