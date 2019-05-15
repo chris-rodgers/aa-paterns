@@ -6,6 +6,7 @@
         v-for="(color, key) in use"
         v-bind:key="key"
         :style="{ backgroundColor: color, color: lightOrDark(color) === 'dark' ? 'white' : 'black' }"
+        v-on:click="copyString(color)"
         class="colors__item"
       >
         <div class="colors__name">{{key}}</div>
@@ -17,7 +18,7 @@
 </template>
 
 <script>
-import { lightOrDark } from "@/helpers";
+import { copyString, lightOrDark } from "@/helpers";
 
 const colors = {
   "Light Blue": "#6dcff6", // Sky,
@@ -78,7 +79,8 @@ export default {
           ...getColor("Green")
         }
       },
-      lightOrDark
+      lightOrDark,
+      copyString
     };
   }
 };
@@ -98,11 +100,26 @@ export default {
     grid-column: 1 / -1;
   }
   &__item {
+    position: relative;
     padding: 48px 22px;
     border-radius: $global-radius;
+    cursor: pointer;
+    &:hover{
+      &:after{
+        display: block;
+      }
+    }
+    &:after {
+      top: 0;
+      right: 0;
+      display: none;
+      padding: 20px;
+      content: "Copy";
+      position: absolute;
+    }
   }
   &__code {
-    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    font-family: $monospace-font,
       "Courier New", Courier, monospace;
   }
   &__name {
