@@ -6,7 +6,7 @@
         v-for="(color, key) in use"
         v-bind:key="key"
         :style="{ backgroundColor: color, color: lightOrDark(color) === 'dark' ? 'white' : 'black' }"
-        v-on:click="copyString(color)"
+        v-on:click="copyColor(color)"
         class="colors__item"
       >
         <div class="colors__name">{{key}}</div>
@@ -40,6 +40,10 @@ const colors = {
 const getColor = function(name) {
   return { [name]: colors[name] };
 };
+const copyColor = function(string){
+  copyString(string);
+  this.$toasted.show(`'${string}' has been copied to your clipboard.`);
+}
 export default {
   name: "Colors",
   data() {
@@ -80,7 +84,7 @@ export default {
         }
       },
       lightOrDark,
-      copyString
+      copyColor
     };
   }
 };

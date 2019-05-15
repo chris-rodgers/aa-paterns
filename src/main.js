@@ -3,6 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Toasted from 'vue-toasted';
+  
+Vue.use(Toasted, {
+  position: 'bottom-left',
+  duration: 2000,
+})
 
 Vue.config.productionTip = false
 
