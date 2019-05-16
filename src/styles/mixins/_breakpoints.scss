@@ -1,0 +1,13 @@
+
+
+@mixin breakpoint($breakpoint, $upDown: 'up') {
+	$obj: (
+		up: min,
+		down: max,
+	);
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (#{map-get($obj, $upDown)}-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	}
+}

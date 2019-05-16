@@ -1,3 +1,8 @@
+$breakpoints: (
+    "mobile": 426px,
+	"tablet": 769px,
+);
+
 $global-radius: 6px;
 $global-radius-small: 2px;
 
@@ -9,6 +14,10 @@ $monospace-font: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono";
 
 $gray-one: #eeeeee;
 
+// Mixins
+@import "./mixins/breakpoints";
+
+// Styles
 @import "./base/reset";
 @import "./base/copyable";
 @import "./base/transitions";

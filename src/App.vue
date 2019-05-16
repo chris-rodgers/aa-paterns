@@ -5,7 +5,7 @@
         <img class="header__logo" src="./assets/logo.svg">
       </div>
     </header>
-    <div class="wrapper">
+    <div class="wrapper wrapper--offcanvas">
       <aside-nav/>
       <main class="main">
         <div class="main__title">
@@ -37,7 +37,12 @@ export default {
   border-bottom: 1px solid #dedddc;
   margin-bottom: 40px;
   &__logo {
-    padding: 15px 50px;
+    height: 40px;
+    margin: 10px 20px;
+    @include breakpoint("tablet") {
+      height: 50px;
+      margin: 15px 50px;
+    }
   }
 }
 .wrapper {
@@ -45,10 +50,24 @@ export default {
   display: flex;
   margin: 0 auto;
   max-width: 1300px;
+  &--offcanvas {
+    transition: transform 0.5s ease;
+    @include breakpoint("mobile", "down") {
+      width: calc(100vw + 200px);
+      transform: translateX(-200px);
+    }
+  }
 }
 .main {
   flex: 1;
-  padding: 0 20px 0 40px;
+  padding: 0 20px;
+  min-width: 100vw;
+  @include breakpoint("mobile"){
+    min-width: auto;
+  }
+  @include breakpoint("tablet") {
+    padding: 0 20px 0 40px;
+  }
   &__title {
     margin-bottom: 12px;
     overflow: hidden;

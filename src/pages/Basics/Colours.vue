@@ -34,14 +34,14 @@ import { SwitchContainer, SwitchItem } from "@/components/Switch";
 import kebabCase from "lodash/kebabCase";
 
 const colors = {
-  "Light Blue": "#6dcff6", // Sky, Bora Bora, 
-  "Baby Blue": "#2990e6", //
-  Blue: "#005baa", // Sea
+  "Light Blue": "#6dcff6", // Sky, 
+  "Baby Blue": "#2990e6", //Azure
+  Blue: "#005baa", // Sea, Sapphire
   Red: "#be1e2d", // Volcano, Lava,
   Black: "#000000",
   White: "#ffffff",
-  "Dark Gray": "#495662", // Ash,
-  Orange: "#f79c34",
+  "Dark Gray": "#495662", // Ash, Charcoal 
+  Orange: "#f79c34", // Tiger
   Green: "#7dc855", // Forest
   Yellow: "#ffff00", // Sun
   "Brown Red": "#af554c", // Mud

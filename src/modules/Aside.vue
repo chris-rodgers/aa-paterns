@@ -33,7 +33,9 @@ export default {
 <style lang="scss">
 .aside {
   flex-basis: 280px;
-  padding: 40px 40px 0 20px;
+  @include breakpoint("tablet") {
+    padding: 40px 40px 0 20px;
+  }
   &-section {
     padding-bottom: 12px;
     margin-bottom: 40px;

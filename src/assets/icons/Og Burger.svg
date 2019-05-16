@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1824" data-name="Rectangle 1824" width="24" height="24" transform="translate(-1393 -5446)" fill="none" stroke="#495662" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_220" data-name="Mask Group 220" transform="translate(1393 5446)" clip-path="url(#clip-path)">
+    <g id="Burger_menu" data-name="Burger menu" transform="translate(-347.4 -584)">
+      <line id="Line_352" data-name="Line 352" x2="20" transform="translate(-1043.6 -4858)" fill="none" stroke="#495662" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_353" data-name="Line 353" x2="20" transform="translate(-1043.6 -4850)" fill="none" stroke="#495662" stroke-linecap="round" stroke-width="4"/>
+      <line id="Line_354" data-name="Line 354" x2="20" transform="translate(-1043.6 -4842)" fill="none" stroke="#495662" stroke-linecap="round" stroke-width="4"/>
+    </g>
+  </g>
+</svg>
