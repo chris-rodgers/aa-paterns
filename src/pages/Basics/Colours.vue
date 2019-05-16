@@ -99,7 +99,6 @@ export default {
     grid-column: 1 / -1;
   }
   &__item {
-    position: relative;
     padding: 48px 22px;
     border-radius: $global-radius;
   }

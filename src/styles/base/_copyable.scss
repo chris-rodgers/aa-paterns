@@ -1,4 +1,5 @@
 .copyable {
+	position: relative;
 	cursor: pointer;
 	&:hover {
 		&:after {
