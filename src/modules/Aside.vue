@@ -62,7 +62,7 @@ export default {
         background-color: #005ba9;
       }
       &:not(&--active):hover {
-        background-color: transparentize(#005ba9, 0.9);
+        background-color: $gray-two;
       }
     }
     &:not(:last-child) {
