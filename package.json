@@ -20,6 +20,7 @@
     "@vue/eslint-config-prettier": "^4.0.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-svg": "^0.1.2",
     "vue-template-compiler": "^2.5.21"
   }
 }
