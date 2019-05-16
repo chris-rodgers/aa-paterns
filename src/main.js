@@ -16,6 +16,8 @@ Vue.use(Toasted, {
 // Add copy to clipboard directive
 Vue.directive("copy", {
 	bind: (el, binding, vnode) => {
+    el.classList.add("copyable");
+
 		el.addEventListener("click", () => {
 			const { value } = binding;
 			console.log(value);
@@ -33,7 +35,6 @@ Vue.directive("copy", {
 			document.execCommand("copy");
 			// Remove temporary element
 			document.body.removeChild(textarea);
-			console.log(vnode);
 			vnode.context.$toasted.show(`'${value}' has been copied to your clipboard.`);
 		});
 	}

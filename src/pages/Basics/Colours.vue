@@ -102,20 +102,6 @@ export default {
     position: relative;
     padding: 48px 22px;
     border-radius: $global-radius;
-    cursor: pointer;
-    &:hover {
-      &:after {
-        display: block;
-      }
-    }
-    &:after {
-      top: 0;
-      right: 0;
-      display: none;
-      padding: 20px;
-      content: "Copy";
-      position: absolute;
-    }
   }
   &__code {
     font-family: $monospace-font, "Courier New", Courier, monospace;

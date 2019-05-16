@@ -1,0 +1,16 @@
+.copyable {
+	cursor: pointer;
+	&:hover {
+		&:after {
+			display: block;
+		}
+	}
+	&:after {
+		top: 0;
+		right: 0;
+		display: none;
+		padding: 20px;
+		content: "Copy";
+		position: absolute;
+	}
+}
