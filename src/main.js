@@ -13,18 +13,26 @@ Vue.use(Toasted, {
 	duration: 2000
 });
 
+const copy = function(){
+	
+}
+
 // Add copy to clipboard directive
 Vue.directive("copy", {
+	update: (el, binding, vnode) =>{
+		el.setAttribute('data-copy', binding.value)
+	},
 	bind: (el, binding, vnode) => {
-    el.classList.add("copyable");
+		el.classList.add("copyable");
+		el.setAttribute('data-copy', binding.value)
 
 		el.addEventListener("click", () => {
-			const { value } = binding;
-			console.log(value);
+			const val = el.getAttribute('data-copy');
+
 			// Create new element
 			var textarea = document.createElement("textarea");
 			// Set value (string to be copied)
-			textarea.value = value;
+			textarea.value = val;
 			// Set non-editable to avoid focus and move outside of view
 			textarea.setAttribute("readonly", "");
 			textarea.style = { position: "absolute", left: "-9999px" };
@@ -35,7 +43,9 @@ Vue.directive("copy", {
 			document.execCommand("copy");
 			// Remove temporary element
 			document.body.removeChild(textarea);
-			vnode.context.$toasted.show(`'${value}' has been copied to your clipboard.`);
+			vnode.context.$toasted.show(
+				`'${val}' has been copied to your clipboard.`
+			);
 		});
 	}
 });

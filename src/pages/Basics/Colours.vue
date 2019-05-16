@@ -2,50 +2,73 @@
   <div>
     <div style="text-align: right;">
       <switch-container>
-        <switch-item :onChange="handleFormatChange" name="format" :value="item" v-for="(item, index) in formats" v-bind:key="index" :checked="index === 0">{{item}}</switch-item>
+        <switch-item
+          :onChange="handleFormatChange"
+          name="format"
+          :value="key"
+          v-for="(func, key) in formats"
+          v-bind:key="key"
+          :checked="key === selected"
+        >{{key}}</switch-item>
       </switch-container>
     </div>
-    <div v-for="(use, key) in colors" v-bind:key="key" class="colors">
+    <div v-for="(use, key) in sections" v-bind:key="key" class="colors">
       <h2 class="colors__heading">{{key}}</h2>
       <div
         v-for="(color, key) in use"
         v-bind:key="key"
-        :style="{ backgroundColor: color, color: lightOrDark(color) === 'dark' ? 'white' : 'black' }"
-        v-copy="color"
+        :style="{ backgroundColor: formats['HEX'](color), color: lightOrDark(formats['HEX'](color)) === 'dark' ? 'white' : 'black' }"
+        v-copy="formats[selected](color)"
         class="colors__item"
       >
-        <div class="colors__name">{{key}}</div>
-
-        <div class="colors__code">{{color}}</div>
+        <div class="colors__name">{{color}}</div>
+        <div class="colors__code">{{formats[selected](color)}}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { lightOrDark } from "@/helpers";
+import { lightOrDark, hexToRgb } from "@/helpers";
 import { SwitchContainer, SwitchItem } from "@/components/Switch";
+import kebabCase from "lodash/kebabCase";
 
 const colors = {
-  "Light Blue": "#6dcff6", // Sky,
-  "Baby Blue": "#2990e6",
-  Blue: "#005baa", // Sea blue
-  Red: "#be1e2d", // Coral, Lava,
+  "Light Blue": "#6dcff6", // Sky, Bora Bora, 
+  "Baby Blue": "#2990e6", //
+  Blue: "#005baa", // Sea
+  Red: "#be1e2d", // Volcano, Lava,
   Black: "#000000",
   White: "#ffffff",
   "Dark Gray": "#495662", // Ash,
   Orange: "#f79c34",
-  Green: "#7dc855",
-  Yellow: "#ffff00",
-  "Brown Red": "#af554c",
+  Green: "#7dc855", // Forest
+  Yellow: "#ffff00", // Sun
+  "Brown Red": "#af554c", // Mud
   "Gray One": "#eeeeee",
   "Gray Two": "#e1e8ee",
   "Gray Three": "#dddddd",
   "Gray Four": "#bdc6cf"
 };
-const getColor = function(name) {
-  return { [name]: colors[name] };
+const sections = {
+  Logo: ["Light Blue", "Blue", "Red"],
+  Type: ["Black", "Dark Gray", "Blue", "Baby Blue"],
+  Buttons: ["Orange", "Blue", "White"],
+  Special: ["Brown Red", "Yellow", "Green"],
+  "UI Elements": [
+    "Black",
+    "Baby Blue",
+    "Blue",
+    "White",
+    "Gray One",
+    "Gray Two",
+    "Gray Three",
+    "Gray Four",
+    "Orange",
+    "Green"
+  ]
 };
+
 export default {
   name: "Colors",
   components: {
@@ -53,52 +76,31 @@ export default {
     SwitchItem
   },
   methods: {
-    handleFormatChange(x){
-      console.log(x)
+    handleFormatChange(x) {
+      this.selected = x;
     }
   },
   data() {
     return {
-      colors: {
-        Logo: {
-          ...getColor("Light Blue"),
-          ...getColor("Blue"),
-          ...getColor("Red")
-        },
-        Type: {
-          ...getColor("Black"),
-          ...getColor("Dark Gray"),
-          ...getColor("Blue"),
-          ...getColor("Baby Blue")
-        },
-        Buttons: {
-          ...getColor("Orange"),
-          ...getColor("Blue"),
-          ...getColor("White")
-        },
-        Special: {
-          ...getColor("Brown Red"),
-          ...getColor("Yellow"),
-          ...getColor("Green")
-        },
-        "UI Elements": {
-          ...getColor("Black"),
-          ...getColor("Baby Blue"),
-          ...getColor("Blue"),
-          ...getColor("White"),
-          ...getColor("Gray One"),
-          ...getColor("Gray Two"),
-          ...getColor("Gray Three"),
-          ...getColor("Gray Four"),
-          ...getColor("Orange"),
-          ...getColor("Green")
-        }
-      },
+      sections,
       lightOrDark,
-      formats: ['HEX', 'CSS', "RGB"]
+      selected: "HEX",
+      formats: {
+        HEX: function(value) {
+          return colors[value];
+        },
+        CSS: function(value) {
+          return `var(--color-${kebabCase(value)})`;
+        },
+        RGBA: function(value){
+          const x = hexToRgb(colors[value]);
+          return `rgba(${x.r},${x.g},${x.b},1)`
+        }
+      }
     };
   }
 };
+console.log(this);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -106,7 +108,7 @@ export default {
 .colors {
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 
   margin-bottom: 24px;
 
