@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1727" data-name="Rectangle 1727" width="24" height="24" transform="translate(-1649 -5651)" fill="#495662" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_174" data-name="Mask Group 174" transform="translate(1649 5651)" clip-path="url(#clip-path)">
+    <g id="email-outbox" transform="translate(-1649 -5651)">
+      <g id="Frames-24px">
+        <rect id="Rectangle_1726" data-name="Rectangle 1726" width="24" height="24" fill="none"/>
+      </g>
+      <g id="Solid" transform="translate(3.029 3.546)">
+        <g id="Group_1491" data-name="Group 1491" transform="translate(2 0.586)">
+          <path id="Path_1944" data-name="Path 1944" d="M13.992,3.935,10.642.586,7.293,3.935,8.3,4.941,9.931,3.31V6.573h1.423V3.31l1.632,1.632Z" transform="translate(-3.527 -0.586)" fill="#495662"/>
+          <g id="Group_1490" data-name="Group 1490" transform="translate(0 7.41)">
+            <path id="Path_1945" data-name="Path 1945" d="M9.414,15.143l6.379-3.959A1.412,1.412,0,0,0,15.107,11H3.722a1.412,1.412,0,0,0-.687.184Z" transform="translate(-2.299 -11)" fill="#495662"/>
+            <path id="Path_1946" data-name="Path 1946" d="M9.491,17.155a.712.712,0,0,1-.75,0L2,12.974c0,.006,0,.012,0,.018v6.4a1.425,1.425,0,0,0,1.423,1.423H14.808A1.425,1.425,0,0,0,16.231,19.4v-6.4c0-.006,0-.013,0-.019Z" transform="translate(-2 -11.569)" fill="#495662"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1706" data-name="Rectangle 1706" width="24" height="24" transform="translate(-1841 -5692)" fill="#495662" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_162" data-name="Mask Group 162" transform="translate(1841 5692)" clip-path="url(#clip-path)">
+    <g id="beauty-hand-soap" transform="translate(-1838.092 -5689.255)">
+      <g id="Frames-24px">
+        <rect id="Rectangle_1705" data-name="Rectangle 1705" width="18.348" height="18.349" fill="none"/>
+      </g>
+      <g id="Outline" transform="translate(0.001 0.766)">
+        <g id="Group_1483" data-name="Group 1483">
+          <path id="Path_1924" data-name="Path 1924" d="M19.881,7.5A3.44,3.44,0,1,1,13,7.5c0-1.9,3.44-6.5,3.44-6.5S19.881,5.6,19.881,7.5Z" transform="translate(-3.063 -1.002)" fill="#495662"/>
+          <path id="Path_1925" data-name="Path 1925" d="M15.7,17.3H9.14l.224-.224a.764.764,0,0,0,0-1.081L8.6,15.226a.767.767,0,0,0-.825-.17L5,16.166v4.952H13.41a.762.762,0,0,0,.54-.224L16.244,18.6a.764.764,0,0,0-.54-1.3Z" transform="translate(-1.179 -4.299)" fill="#495662"/>
+          <path id="Path_1926" data-name="Path 1926" d="M2.294,15H.765A.765.765,0,0,0,0,15.766v5.351a.764.764,0,0,0,.764.764H2.294a.764.764,0,0,0,.764-.764V15.766A.764.764,0,0,0,2.294,15Z" transform="translate(-0.001 -4.299)" fill="#495662"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

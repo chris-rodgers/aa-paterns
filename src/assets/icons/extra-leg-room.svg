@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1828" data-name="Rectangle 1828" width="24" height="24" transform="translate(-1649 -5446)" fill="#495662"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_224" data-name="Mask Group 224" transform="translate(1649 5446)" clip-path="url(#clip-path)">
+    <g id="baseline-airline_seat_legroom_extra-24px" transform="translate(-1649 -5446)">
+      <path id="Path_2049" data-name="Path 2049" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Path_2050" data-name="Path 2050" d="M4,12V3H2v9a5,5,0,0,0,5,5h6V15H7A3,3,0,0,1,4,12Zm18.83,5.24a1.555,1.555,0,0,0-2.03-.63l-1.09.5L16.3,10.13a2.009,2.009,0,0,0-1.79-1.12L11,9V3H5v8a3,3,0,0,0,3,3h7l3.41,7,3.72-1.7A1.508,1.508,0,0,0,22.83,17.24Z" fill="#495662"/>
+    </g>
+  </g>
+</svg>

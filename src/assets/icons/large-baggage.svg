@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1767" data-name="Rectangle 1767" width="24" height="24" transform="translate(-1457 -5569)" fill="#495662" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_191" data-name="Mask Group 191" transform="translate(1457 5569)" clip-path="url(#clip-path)">
+    <g id="travel-bag-1" transform="translate(-1457 -5569)">
+      <g id="Frames-24px">
+        <rect id="Rectangle_1765" data-name="Rectangle 1765" width="24" height="24.001" fill="none"/>
+        <rect id="Rectangle_1766" data-name="Rectangle 1766" width="24" height="24.001" fill="none"/>
+      </g>
+      <g id="Outline" transform="translate(1)">
+        <g id="Group_1506" data-name="Group 1506" transform="translate(6.002 3.002)">
+          <path id="Path_1978" data-name="Path 1978" d="M10.708,7.513h1.8V4.806h2.706V3H8v1.8h2.706Z" transform="translate(-6.198 -3.002)" fill="#495662"/>
+          <path id="Path_1979" data-name="Path 1979" d="M15.023,9H7.806a1.8,1.8,0,0,0-1.8,1.8v8.119a1.8,1.8,0,0,0,1.8,1.8v.9h1.8v-.9h3.608v.9h1.8v-.9a1.8,1.8,0,0,0,1.8-1.8V10.806A1.8,1.8,0,0,0,15.023,9Zm0,3.608v1.8h-.9v-1.8H7.806v-.9h7.217Z" transform="translate(-6.002 -3.589)" fill="#495662"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

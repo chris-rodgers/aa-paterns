@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1650" data-name="Rectangle 1650" width="24" height="24" transform="translate(-1841 -5856)" fill="#495662"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_120" data-name="Mask Group 120" transform="translate(1841 5856)" clip-path="url(#clip-path)">
+    <g id="Ways_to_pay" data-name="Ways to pay" transform="translate(-2537.306 -6549.97)">
+      <g id="Group_22" data-name="Group 22" transform="translate(696.302 693.964)">
+        <path id="Path_1061" data-name="Path 1061" d="M582.1,346.788h-.887v-1.774a1.778,1.778,0,0,0-1.774-1.774H579.1l-1.53-3.062a.891.891,0,0,0-1.124-.428l-8.723,3.489h-.72a1.779,1.779,0,0,0-1.774,1.774v10.658a1.779,1.779,0,0,0,1.774,1.774h12.433a1.778,1.778,0,0,0,1.774-1.774V353.9h.887a.887.887,0,0,0,.887-.887v-5.329a.887.887,0,0,0-.887-.893Zm-5.758-5.089.769,1.538H572.5Zm4.869,10.418h-5.849l-1.774-1.774,1.774-1.774h5.849Z" transform="translate(-561.668 -336.123)" fill="#495662"/>
+        <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="0.901" cy="0.901" rx="0.901" ry="0.901" transform="translate(14.373 13.472)" fill="#495662"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1761" data-name="Rectangle 1761" width="24" height="24" transform="translate(-1329 -5569)" fill="#495662" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_189" data-name="Mask Group 189" transform="translate(1329 5569)" clip-path="url(#clip-path)">
+    <g id="travel-camping" transform="translate(-1329 -5569)">
+      <g id="Frames-24px">
+        <rect id="Rectangle_1760" data-name="Rectangle 1760" width="24" height="24.001" fill="none"/>
+      </g>
+      <g id="Outline" transform="translate(1.91 2.959)">
+        <path id="Path_1975" data-name="Path 1975" d="M17.894,16.688,10.732,6.253,13.1,2.311l-1.373-.824L10.008,4.345,8.292,1.487l-1.372.825L9.286,6.253,2.124,16.688a.8.8,0,0,0,.68,1.225h4.8v-1.6a2.4,2.4,0,1,1,4.8,0v1.6h4.8a.8.8,0,0,0,.678-1.225Z" transform="translate(0)" fill="#495662"/>
+      </g>
+    </g>
+  </g>
+</svg>

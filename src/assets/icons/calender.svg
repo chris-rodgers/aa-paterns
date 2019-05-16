@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1807" data-name="Rectangle 1807" width="24" height="24" transform="translate(-1393 -5487)" fill="#495662" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_210" data-name="Mask Group 210" transform="translate(1393 5487)" clip-path="url(#clip-path)">
+    <g id="baseline-calendar_today-24px" transform="translate(-1393 -5487)">
+      <path id="Path_2022" data-name="Path 2022" d="M16.578,2.62h-.81V1h-1.62V2.62H6.05V1H4.43V2.62H3.62A1.625,1.625,0,0,0,2,4.24V17.2a1.625,1.625,0,0,0,1.62,1.62H16.578A1.625,1.625,0,0,0,18.2,17.2V4.24A1.625,1.625,0,0,0,16.578,2.62Zm0,14.578H3.62V6.669H16.578Z" transform="translate(1.693 2.32)" fill="#495662"/>
+      <path id="Path_2023" data-name="Path 2023" d="M0,0H24V24H0Z" fill="none"/>
+    </g>
+  </g>
+</svg>

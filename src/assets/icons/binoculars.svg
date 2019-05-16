@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1702" data-name="Rectangle 1702" width="24" height="24" transform="translate(-1713 -5692)" fill="#495662" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_160" data-name="Mask Group 160" transform="translate(1713 5692)" clip-path="url(#clip-path)">
+    <g id="binoculars" transform="translate(-1713 -5692)">
+      <g id="Frames-24px">
+        <rect id="Rectangle_1701" data-name="Rectangle 1701" width="24" height="24" fill="none"/>
+      </g>
+      <g id="Solid" transform="translate(0.801 0.761)">
+        <path id="Path_1921" data-name="Path 1921" d="M20.273,15.55,16.954,4.762a2.5,2.5,0,0,0-4.881.734V6.663H10.241V5.5A2.5,2.5,0,0,0,5.36,4.762L2.04,15.55a.922.922,0,0,0-.04.269v.458a4.12,4.12,0,0,0,8.241,0v-4.12h1.831v4.12a4.12,4.12,0,1,0,8.241,0v-.458A.922.922,0,0,0,20.273,15.55ZM6.12,18.566A2.289,2.289,0,1,1,8.41,16.277,2.292,2.292,0,0,1,6.12,18.566Zm10.072,0a2.289,2.289,0,1,1,2.289-2.289A2.292,2.292,0,0,1,16.193,18.566Z" fill="#495662"/>
+      </g>
+    </g>
+  </g>
+</svg>

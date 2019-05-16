@@ -28,7 +28,7 @@
 
 <script>
 import AsideNav from "@/modules/Aside";
-import Burger from "./assets/icons/Og Burger.svg?inline";
+import Burger from "./assets/icons/og-burger.svg?inline";
 
 export default {
   name: "App",

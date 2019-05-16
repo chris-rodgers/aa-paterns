@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1713" data-name="Rectangle 1713" width="24" height="24" transform="translate(-1329 -5733)" fill="#495662" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_167" data-name="Mask Group 167" transform="translate(1329 5733)" clip-path="url(#clip-path)">
+    <g id="banking-spendings-2" transform="translate(-1326.578 -5727.935)">
+      <g id="Frames-24px">
+        <rect id="Rectangle_1712" data-name="Rectangle 1712" width="18.178" height="18.178" fill="none"/>
+      </g>
+      <g id="Solid" transform="translate(0 2.272)">
+        <path id="Path_1930" data-name="Path 1930" d="M16.663,3H7.574A1.516,1.516,0,0,0,6.059,4.515v.757H7.574V4.515h9.089V6.03h-5.3V7.544h5.3l0,4.544H7.574v-.757H6.059v.757A1.516,1.516,0,0,0,7.574,13.6h4.834l-.548,1.1a.751.751,0,0,1-.677.418H6.373L4.544,13.29V9.374L6.373,7.544H9.089V8.3a.759.759,0,0,1-.757.757H6.817v1.515H8.332A2.275,2.275,0,0,0,10.6,8.3V6.787a.758.758,0,0,0-.757-.757H6.059a.75.75,0,0,0-.535.223L4.135,7.64a.747.747,0,0,0-.348-.1H.757A.758.758,0,0,0,0,8.3v6.059a.757.757,0,0,0,.757.757h3.03a.738.738,0,0,0,.348-.1l1.388,1.389a.761.761,0,0,0,.535.221h5.123a2.258,2.258,0,0,0,2.032-1.257L14.1,13.6h2.562a1.516,1.516,0,0,0,1.515-1.515V4.515A1.516,1.516,0,0,0,16.663,3ZM3.03,13.6H1.515V9.059H3.03Z" transform="translate(0 -3)" fill="#495662"/>
+      </g>
+    </g>
+  </g>
+</svg>

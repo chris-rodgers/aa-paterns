@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1805" data-name="Rectangle 1805" width="24" height="24" transform="translate(-1905 -5528)" fill="#495662" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_208" data-name="Mask Group 208" transform="translate(1905 5528)" clip-path="url(#clip-path)">
+    <g id="travel-globe" transform="translate(-1905 -5527.999)">
+      <g id="Frames-24px">
+        <rect id="Rectangle_1803" data-name="Rectangle 1803" width="24" height="24" fill="none"/>
+        <rect id="Rectangle_1804" data-name="Rectangle 1804" width="24" height="24" fill="none"/>
+      </g>
+      <g id="Outline" transform="translate(2.67 2.921)">
+        <g id="Group_1523" data-name="Group 1523" transform="translate(0.002 2.002)">
+          <path id="Path_2011" data-name="Path 2011" d="M0,11.38a7.912,7.912,0,0,0,.365,2.378h3.6V9H.367A7.916,7.916,0,0,0,0,11.38Z" transform="translate(-0.002 -3.453)" fill="#495662"/>
+          <path id="Path_2012" data-name="Path 2012" d="M1.355,6.246H4.246V3.354A7.981,7.981,0,0,0,1.355,6.246Z" transform="translate(-0.282 -2.282)" fill="#495662"/>
+          <path id="Path_2013" data-name="Path 2013" d="M10.173,9H7v4.756h4.756V11.38H10.173Z" transform="translate(-1.453 -3.453)" fill="#495662"/>
+          <path id="Path_2014" data-name="Path 2014" d="M10.173,2.042C9.912,2.016,9.647,2,9.38,2A7.912,7.912,0,0,0,7,2.367v3.6h3.171Z" transform="translate(-1.453 -2.002)" fill="#495662"/>
+          <path id="Path_2015" data-name="Path 2015" d="M15,19.892A7.967,7.967,0,0,0,17.893,17H15Z" transform="translate(-3.111 -5.111)" fill="#495662"/>
+          <path id="Path_2016" data-name="Path 2016" d="M4.246,19.892V17H1.355A7.961,7.961,0,0,0,4.246,19.892Z" transform="translate(-0.282 -5.111)" fill="#495662"/>
+          <path id="Path_2017" data-name="Path 2017" d="M15,14.38h3.6A7.912,7.912,0,0,0,18.966,12H15V14.38Z" transform="translate(-3.111 -4.075)" fill="#495662"/>
+          <path id="Path_2018" data-name="Path 2018" d="M7,20.6a7.937,7.937,0,0,0,4.756,0V17H7Z" transform="translate(-1.453 -5.111)" fill="#495662"/>
+          <path id="Path_2019" data-name="Path 2019" d="M21.446,3.237a.8.8,0,0,0-1.028-.415l-2.224.99L15.56,2.145l-1.274.66c.126.082,2.414,1.605,2.564,1.605l-1.926.858-1.666-.744L12,5.247l3.171,1.59,1.743-.8L15.709,9.166l1.424-.74L18.87,5.253,21.036,4.3A.8.8,0,0,0,21.446,3.237Z" transform="translate(-2.489 -2.032)" fill="#495662"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
