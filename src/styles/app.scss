@@ -1,5 +1,13 @@
 $global-radius: 6px;
+$global-radius-small: 2px;
+
+$global-spacing: 24px;
+$global-spacing-medium: 12px;
+$global-spacing-small: 6px;
+
 $monospace-font: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono";
+
+$gray-one: #eeeeee;
 
 @import "./base/reset";
 @import "./base/copyable";

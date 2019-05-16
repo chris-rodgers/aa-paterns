@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div style="text-align: right;">
+      <switch-container>
+        <switch-item :onChange="handleFormatChange" name="format" :value="item" v-for="(item, index) in formats" v-bind:key="index" :checked="index === 0">{{item}}</switch-item>
+      </switch-container>
+    </div>
     <div v-for="(use, key) in colors" v-bind:key="key" class="colors">
       <h2 class="colors__heading">{{key}}</h2>
       <div
@@ -19,6 +24,7 @@
 
 <script>
 import { lightOrDark } from "@/helpers";
+import { SwitchContainer, SwitchItem } from "@/components/Switch";
 
 const colors = {
   "Light Blue": "#6dcff6", // Sky,
@@ -42,6 +48,15 @@ const getColor = function(name) {
 };
 export default {
   name: "Colors",
+  components: {
+    SwitchContainer,
+    SwitchItem
+  },
+  methods: {
+    handleFormatChange(x){
+      console.log(x)
+    }
+  },
   data() {
     return {
       colors: {
@@ -80,6 +95,7 @@ export default {
         }
       },
       lightOrDark,
+      formats: ['HEX', 'CSS', "RGB"]
     };
   }
 };

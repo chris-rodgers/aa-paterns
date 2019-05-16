@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import AsideNav from "@/components/Aside";
+import AsideNav from "@/modules/Aside";
 
 export default {
   name: "App",

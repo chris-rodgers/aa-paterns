@@ -16,6 +16,7 @@
     </div>
   </aside>
 </template>
+
 <script>
 import { links } from "@/router/index";
 
