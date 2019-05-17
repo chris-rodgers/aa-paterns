@@ -1,15 +1,21 @@
 <template>
   <div>
-    <img src="../../assets/logo/logo.svg">
+    <img v-takeaway="{method: 'download', value: require('../../assets/logo/logo.svg')}" src="../../assets/logo/logo.svg">
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Logo",
+  mounted() {
+    this.$emit("updateFormats", this.formats);
+  },
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      formats: {
+        SVG: null,
+        PNG: null
+      }
     };
   }
 };

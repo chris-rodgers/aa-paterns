@@ -51,6 +51,7 @@ export default {
     },
     handleFormatChange(x) {
       this.selected = x;
+      console.log(x);
     }
   },
   data() {
