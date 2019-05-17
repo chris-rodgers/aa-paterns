@@ -1,9 +1,11 @@
 import { escapeHtml } from "../helpers";
 
 function dataValues(el, binding) {
-	const { value, arg } = binding;
-	const method = arg || "copy";
-	el.setAttribute("data-takeaway", value);
+	const { value } = binding;
+	console.log(binding)
+
+	const method = value.method || "copy";
+	el.setAttribute("data-takeaway", value.value || value);
 	el.setAttribute("data-takeaway-method", method);
 	el.classList.add(`takeaway--${method}`);
 }
@@ -40,7 +42,6 @@ export default {
 	bind: (el, binding, vnode) => {
 		el.classList.add("takeaway");
 		dataValues(el, binding);
-
 		el.addEventListener("click", () => {
 			const val = el.getAttribute("data-takeaway");
 			const method = el.getAttribute("data-takeaway-method");

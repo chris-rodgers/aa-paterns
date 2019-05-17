@@ -7,15 +7,21 @@
           :onChange="handleFormatChange"
           name="format"
           :value="format"
-          v-for="format in formats"
+          v-for="(method, format) in formats"
           v-bind:key="format"
           :checked="format === selected"
         >{{format}}</switch-item>
       </switch-container>
     </div>
+    {{formats[selected]}}
     <div class="icons">
-      <div v-takeaway:download="item.src" class="icons__item" v-for="(item, key) in icons" v-bind:key="key">
-        <img class="icons__icon" :src="item.src">
+      <div
+        v-takeaway="{value: item[selected], method: formats[selected]}"
+        class="icons__item"
+        v-for="(item, key) in icons"
+        v-bind:key="key"
+      >
+        <img class="icons__icon" :src="item.SVG">
         <span class="icons__name">{{item.name}}</span>
         <!-- <a :href="item.src" download>download</a> -->
       </div>
@@ -34,8 +40,8 @@ const icons = req.keys().reduce((a, b) => {
     ...a,
     {
       name,
-      php: `<?php aaIcon('${name}'); ?>`,
-      src: req(b)
+      PHP: `<?php aaIcon('${name}'); ?>`,
+      SVG: req(b)
     }
   ];
 }, []);
@@ -44,17 +50,17 @@ export default {
   name: "Icons",
   methods: {
     handleFormatChange(x) {
-      console.log(x)
+      this.selected = x[0];
     }
   },
   data() {
     return {
       icons,
-      selected: 'PHP',
-      formats: [
-        'PHP',
-        'SVG'
-      ]
+      selected: "PHP",
+      formats: {
+        PHP: "copy",
+        SVG: "dowload"
+      }
     };
   },
   components: {

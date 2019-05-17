@@ -34,36 +34,34 @@ import { SwitchContainer, SwitchItem } from "@/components/Switch";
 import kebabCase from "lodash/kebabCase";
 
 const colors = {
-  "Light Blue": "#6dcff6", // Sky, 
-  "Baby Blue": "#2990e6", //Azure
-  Blue: "#005baa", // Sea, Sapphire
+  Cloud: "#6dcff6", // Sky,
+  Island: "#2990e6", //Azure
+  Cobalt: "#005baa", // Cobalt
   Red: "#be1e2d", // Volcano, Lava,
-  Black: "#000000",
   White: "#ffffff",
-  "Dark Gray": "#495662", // Ash, Charcoal 
+  Type: "#495662", // Ash, Charcoal
   Orange: "#f79c34", // Tiger
   Green: "#7dc855", // Forest
   Yellow: "#ffff00", // Sun
-  "Brown Red": "#af554c", // Mud
-  "Gray One": "#eeeeee",
-  "Gray Two": "#e1e8ee",
-  "Gray Three": "#dddddd",
-  "Gray Four": "#bdc6cf"
+  Maroon: "#af554c", // Mud
+  Zinc: "#eeeeee",
+  Cadet: "#e1e8ee",
+  Alloy: "#dddddd",
+  Pigeon: "#bdc6cf"
 };
 const sections = {
-  Logo: ["Light Blue", "Blue", "Red"],
-  Type: ["Black", "Dark Gray", "Blue", "Baby Blue"],
-  Buttons: ["Orange", "Blue", "White"],
-  Special: ["Brown Red", "Yellow", "Green"],
+  Logo: ["Cloud", "Cobalt", "Red"],
+  Type: ["Type", "Cobalt", "Island"],
+  Buttons: ["Orange", "Cobalt", "White"],
+  Special: ["Maroon", "Yellow", "Green"],
   "UI Elements": [
-    "Black",
-    "Baby Blue",
-    "Blue",
+    "Island",
+    "Cobalt",
     "White",
-    "Gray One",
-    "Gray Two",
-    "Gray Three",
-    "Gray Four",
+    "Zinc",
+    "Cadet",
+    "Alloy",
+    "Pigeon",
     "Orange",
     "Green"
   ]
@@ -92,9 +90,9 @@ export default {
         CSS: function(value) {
           return `var(--color-${kebabCase(value)})`;
         },
-        RGBA: function(value){
+        RGBA: function(value) {
           const x = hexToRgb(colors[value]);
-          return `rgba(${x.r},${x.g},${x.b},1)`
+          return `rgba(${x.r},${x.g},${x.b},1)`;
         }
       }
     };
