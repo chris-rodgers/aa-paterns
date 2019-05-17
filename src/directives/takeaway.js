@@ -2,12 +2,17 @@ import { escapeHtml } from "../helpers";
 
 function dataValues(el, binding) {
 	const { value } = binding;
-	console.log(binding)
-
 	const method = value.method || "copy";
+
 	el.setAttribute("data-takeaway", value.value || value);
 	el.setAttribute("data-takeaway-method", method);
 	el.classList.add(`takeaway--${method}`);
+
+	if(binding.oldValue){
+		const oldMethod = binding.oldValue.method;
+		el.classList.remove(`takeaway--${oldMethod}`);
+
+	}
 }
 
 function handleCopy(val, vnode) {
@@ -49,6 +54,7 @@ export default {
 				copy: handleCopy,
 				download: handleDownload
 			};
+			console.log(method)
 
 			methods[method](val, vnode);
 		});

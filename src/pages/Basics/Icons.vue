@@ -13,7 +13,6 @@
         >{{format}}</switch-item>
       </switch-container>
     </div>
-    {{formats[selected]}}
     <div class="icons">
       <div
         v-takeaway="{value: item[selected], method: formats[selected]}"
@@ -59,7 +58,7 @@ export default {
       selected: "PHP",
       formats: {
         PHP: "copy",
-        SVG: "dowload"
+        SVG: "download"
       }
     };
   },
