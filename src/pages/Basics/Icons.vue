@@ -14,9 +14,10 @@
       </switch-container>
     </div>
     <div class="icons">
-      <div v-takeaway:download="item.php" class="icons__item" v-for="(item, key) in icons" v-bind:key="key">
+      <div v-takeaway:download="item.src" class="icons__item" v-for="(item, key) in icons" v-bind:key="key">
         <img class="icons__icon" :src="item.src">
         <span class="icons__name">{{item.name}}</span>
+        <!-- <a :href="item.src" download>download</a> -->
       </div>
     </div>
   </div>

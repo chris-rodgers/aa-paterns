@@ -9,27 +9,30 @@ function dataValues(el, binding) {
 }
 
 function handleCopy(val, vnode) {
-	// Create new element
-	var textarea = document.createElement("textarea");
-	// Set value (string to be copied)
-	textarea.value = val;
-	// Set non-editable to avoid focus and move outside of view
-	textarea.setAttribute("readonly", "");
-	textarea.style = { position: "absolute", left: "-9999px" };
-	document.body.appendChild(textarea);
-	// Select text inside element
-	textarea.select();
-	// Copy text to clipboard
+	const element = document.createElement("textarea");
+	
+	element.value = val;
+	element.setAttribute("readonly", "");
+	element.style = { position: "absolute", left: "-9999px" };
+	document.body.appendChild(element);
+	element.select();
 	document.execCommand("copy");
-	// Remove temporary element
-	document.body.removeChild(textarea);
+	document.body.removeChild(element);
 	vnode.context.$toasted.show(
 		`'${escapeHtml(val)}' has been copied to your clipboard.`
 	);
 }
 
 function handleDownload(val) {
-    console.log(val)
+	const element = document.createElement("a");
+	const name = val.split(".")[0].split('/');
+
+	element.setAttribute("href", val);
+	element.setAttribute("download", name[name.length-1]);
+	element.style.display = "none";
+	document.body.appendChild(element);
+	element.click();
+	document.body.removeChild(element);
 }
 
 export default {
