@@ -116,6 +116,7 @@ console.log(this);
   &__item {
     padding: $global-spacing-large $global-spacing;
     border-radius: $global-radius;
+    margin-bottom: $global-spacing;
   }
   &__code {
     font-family: $monospace-font, "Courier New", Courier, monospace;
