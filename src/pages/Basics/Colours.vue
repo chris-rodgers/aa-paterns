@@ -87,6 +87,9 @@ export default {
         HEX: function(value) {
           return colors[value];
         },
+        SCSS: function(value) {
+          return `$${kebabCase(value)}`;
+        },
         CSS: function(value) {
           return `var(--color-${kebabCase(value)})`;
         },

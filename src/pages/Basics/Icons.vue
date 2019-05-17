@@ -20,9 +20,9 @@
         v-for="(item, key) in icons"
         v-bind:key="key"
       >
-        <img class="icons__icon" :src="item.SVG">
+        <img class="icons__icon" :src="item.Download">
         <span class="icons__name">{{item.name}}</span>
-        <a :href="item.SVG" download>download</a>
+        <!-- <a :href="item.Download" download>download</a> -->
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@ const icons = req.keys().reduce((a, b) => {
     {
       name,
       PHP: `<?php aaIcon('${name}'); ?>`,
-      SVG: req(b)
+      Download: req(b)
     }
   ];
 }, []);
@@ -58,7 +58,7 @@ export default {
       selected: "PHP",
       formats: {
         PHP: "copy",
-        SVG: "download"
+        Download: "download"
       }
     };
   },
