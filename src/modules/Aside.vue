@@ -34,29 +34,29 @@ export default {
 .aside {
   flex-basis: 280px;
   @include breakpoint("tablet") {
-    padding: 40px 40px 0 20px;
+    padding: $global-spacing-large $global-spacing-large 0 $global-spacing;
   }
   &-section {
-    padding-bottom: 12px;
-    margin-bottom: 40px;
+    padding-bottom: $global-spacing-medium;
+    margin-bottom: $global-spacing-large;
     &__title {
       font-weight: bold;
       text-transform: uppercase;
-      padding: 0 30px 12px;
+      padding: 0 $global-spacing $global-spacing-medium;
     }
     &__links {
       margin: 0;
-      padding: 18px;
+      padding: $global-spacing-medium;
       list-style: none;
     }
     &__link {
       display: block;
-      padding: 12px;
+      padding: $global-spacing-medium;
       color: inherit;
       text-decoration: none;
       cursor: pointer;
       border-radius: $global-radius;
-      margin: 5px 0;
+      margin: $global-spacing-small 0;
       &--active {
         color: white;
         background-color: #005ba9;

@@ -45,7 +45,7 @@ export default {
 <style lang="scss">
 .header {
   border-bottom: 1px solid $zinc;
-  margin-bottom: 40px;
+  margin-bottom: $global-spacing-large;
   &__inner {
     width: 100%;
     display: flex;
@@ -53,20 +53,20 @@ export default {
     align-items: center;
   }
   &__logo {
-    height: 40px;
-    margin: 10px 20px;
+    height: $global-spacing-large;
+    margin: $global-spacing-medium;
     @include breakpoint("tablet") {
       height: 50px;
-      margin: 15px 50px;
+      margin: $global-spacing-medium ($global-spacing + $global-spacing-medium);
     }
   }
   &__button {
     line-height: 0;
   }
   &__burger {
-    width: 20px;
-    height: 20px;
-    margin: 20px;
+    width: $global-spacing;
+    height: $global-spacing;
+    margin: $global-spacing-medium;
     line {
       stroke: $cobalt;
     }
@@ -93,16 +93,16 @@ export default {
 }
 .main {
   flex: 1;
-  padding: 0 20px;
+  padding: 0 $global-spacing-medium;
   min-width: 100vw;
   @include breakpoint("mobile") {
     min-width: auto;
   }
   @include breakpoint("tablet") {
-    padding: 0 20px 0 40px;
+    padding: 0 $global-spacing 0 $global-spacing-large;
   }
   &__title {
-    margin-bottom: 12px;
+    margin-bottom: $global-spacing-medium;
     overflow: hidden;
   }
   &__content {
