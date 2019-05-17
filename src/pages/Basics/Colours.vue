@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="text-align: right;">
+    <div class="text-right">
       <switch-container>
         <switch-item
           :onChange="handleFormatChange"

@@ -21,6 +21,9 @@ $gray-three: #dddddd;
 // Mixins
 @import "./mixins/breakpoints";
 
+// Helpers
+@import "./helpers/text-align";
+
 // Styles
 @import "./base/reset";
 @import "./base/copyable";

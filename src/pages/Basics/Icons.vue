@@ -1,6 +1,18 @@
 <template>
   <div>
     <!-- <h2>Spacing</h2> -->
+    <div class="text-right">
+      <switch-container>
+        <switch-item
+          :onChange="handleFormatChange"
+          name="format"
+          :value="format"
+          v-for="format in formats"
+          v-bind:key="format"
+          :checked="format === selected"
+        >{{format}}</switch-item>
+      </switch-container>
+    </div>
     <div class="icons">
       <div v-copy="item.php" class="icons__item" v-for="(item, key) in icons" v-bind:key="key">
         <img class="icons__icon" :src="item.src">
@@ -11,25 +23,42 @@
 </template>
 
 <script>
+import { SwitchContainer, SwitchItem } from "@/components/Switch";
+
 const req = require.context("../../assets/icons", true, /.svg$/);
 
 const icons = req.keys().reduce((a, b) => {
-  const name = b.replace('./', '').replace('.svg', '');
-  return [...a, {
-    name,
-    php: `<?php aaIcon('${name}'); ?>`,
-    src: req(b)
-  }];
+  const name = b.replace("./", "").replace(".svg", "");
+  return [
+    ...a,
+    {
+      name,
+      php: `<?php aaIcon('${name}'); ?>`,
+      src: req(b)
+    }
+  ];
 }, []);
-
-console.log(icons[0]);
 
 export default {
   name: "Icons",
+  methods: {
+    handleFormatChange(x) {
+      console.log(x)
+    }
+  },
   data() {
     return {
-      icons
+      icons,
+      selected: 'PHP',
+      formats: [
+        'PHP',
+        'SVG'
+      ]
     };
+  },
+  components: {
+    SwitchContainer,
+    SwitchItem
   }
 };
 </script>
@@ -40,7 +69,7 @@ export default {
   display: grid;
   grid-gap: $global-spacing;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
     padding: $global-spacing $global-spacing $global-spacing-large;
@@ -49,7 +78,7 @@ export default {
     border-bottom: 1px solid $gray-one;
     font-family: $monospace-font;
   }
-  &__icon{
+  &__icon {
     width: $global-spacing-large;
     height: $global-spacing-large;
     margin-bottom: $global-spacing;
