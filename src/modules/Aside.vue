@@ -34,7 +34,7 @@ export default {
 .aside {
   flex-basis: 280px;
   @include breakpoint("tablet") {
-    padding: $global-spacing-large $global-spacing-large 0 $global-spacing;
+    padding: $global-spacing $global-spacing 0 $global-spacing;
   }
   &-section {
     padding-bottom: $global-spacing-medium;
