@@ -54,10 +54,7 @@ export default {
   }
   &__logo {
     height: 40px;
-    margin: $global-spacing-medium;
-    @include breakpoint("mobile") {
-      margin: $global-spacing-medium $global-spacing;
-    }
+    margin: $global-spacing-medium $global-spacing;
     @include breakpoint("tablet") {
       height: 50px;
       margin: $global-spacing-medium ($global-spacing + $global-spacing-medium);
@@ -69,7 +66,7 @@ export default {
   &__burger {
     width: $global-spacing;
     height: $global-spacing;
-    margin: $global-spacing-medium;
+    margin: $global-spacing-medium $global-spacing;
     line {
       stroke: $cobalt;
     }
@@ -96,7 +93,7 @@ export default {
 }
 .main {
   flex: 1;
-  padding: 0 $global-spacing-medium;
+  padding: 0 $global-spacing;
   min-width: 100vw;
   @include breakpoint("mobile") {
     min-width: auto;
