@@ -53,8 +53,11 @@ export default {
     align-items: center;
   }
   &__logo {
-    height: $global-spacing-large;
+    height: 40px;
     margin: $global-spacing-medium;
+    @include breakpoint("mobile") {
+      margin: $global-spacing-medium $global-spacing;
+    }
     @include breakpoint("tablet") {
       height: 50px;
       margin: $global-spacing-medium ($global-spacing + $global-spacing-medium);
