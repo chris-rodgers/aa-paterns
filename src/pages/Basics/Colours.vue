@@ -107,24 +107,23 @@ console.log(this);
 <style scoped lang="scss">
 .colors {
   display: grid;
-  grid-gap: 16px;
+  grid-gap: $global-spacing;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-
-  margin-bottom: 24px;
+  margin-bottom: $global-spacing;
 
   &__heading {
     margin: 0;
     grid-column: 1 / -1;
   }
   &__item {
-    padding: 48px 22px;
+    padding: $global-spacing-large $global-spacing;
     border-radius: $global-radius;
   }
   &__code {
     font-family: $monospace-font, "Courier New", Courier, monospace;
   }
   &__name {
-    margin-bottom: 6px;
+    margin-bottom: $global-spacing-small;
     font-weight: bold;
   }
 }
