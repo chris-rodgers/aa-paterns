@@ -4,6 +4,7 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import Toasted from "vue-toasted";
+import { esacapeHtml, escapeHtml } from "./helpers";
 
 Vue.config.productionTip = false;
 
@@ -13,21 +14,17 @@ Vue.use(Toasted, {
 	duration: 2000
 });
 
-const copy = function(){
-	
-}
-
 // Add copy to clipboard directive
 Vue.directive("copy", {
-	update: (el, binding, vnode) =>{
-		el.setAttribute('data-copy', binding.value)
+	update: (el, binding, vnode) => {
+		el.setAttribute("data-copy", binding.value);
 	},
 	bind: (el, binding, vnode) => {
 		el.classList.add("copyable");
-		el.setAttribute('data-copy', binding.value)
+		el.setAttribute("data-copy", binding.value);
 
 		el.addEventListener("click", () => {
-			const val = el.getAttribute('data-copy');
+			const val = el.getAttribute("data-copy");
 
 			// Create new element
 			var textarea = document.createElement("textarea");
@@ -44,7 +41,7 @@ Vue.directive("copy", {
 			// Remove temporary element
 			document.body.removeChild(textarea);
 			vnode.context.$toasted.show(
-				`'${val}' has been copied to your clipboard.`
+				`'${escapeHtml(val)}' has been copied to your clipboard.`
 			);
 		});
 	}

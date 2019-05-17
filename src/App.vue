@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .header {
-  border-bottom: 1px solid $gray-three;
+  border-bottom: 1px solid $gray-one;
   margin-bottom: 40px;
   &__inner {
     width: 100%;

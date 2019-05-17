@@ -66,7 +66,7 @@ export default {
       }
     }
     &:not(:last-child) {
-      border-bottom: 1px solid $gray-three;
+      border-bottom: 1px solid $gray-one;
     }
   }
 }
