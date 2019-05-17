@@ -14,17 +14,17 @@ Vue.use(Toasted, {
 	duration: 2000
 });
 
-// Add copy to clipboard directive
-Vue.directive("copy", {
+// Add takeaway to clipboard directive
+Vue.directive("takeaway", {
 	update: (el, binding, vnode) => {
-		el.setAttribute("data-copy", binding.value);
+		el.setAttribute("data-takeaway", binding.value);
 	},
 	bind: (el, binding, vnode) => {
-		el.classList.add("copyable");
-		el.setAttribute("data-copy", binding.value);
+		el.classList.add("takeaway", "takeaway--copy");
+		el.setAttribute("data-takeaway", binding.value);
 
 		el.addEventListener("click", () => {
-			const val = el.getAttribute("data-copy");
+			const val = el.getAttribute("data-takeaway");
 
 			// Create new element
 			var textarea = document.createElement("textarea");

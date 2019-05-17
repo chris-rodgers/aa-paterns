@@ -18,7 +18,7 @@
         v-for="(color, key) in use"
         v-bind:key="key"
         :style="{ backgroundColor: formats['HEX'](color), color: lightOrDark(formats['HEX'](color)) === 'dark' ? 'white' : 'black' }"
-        v-copy="formats[selected](color)"
+        v-takeaway="formats[selected](color)"
         class="colors__item"
       >
         <div class="colors__name">{{color}}</div>

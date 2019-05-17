@@ -14,7 +14,7 @@
       </switch-container>
     </div>
     <div class="icons">
-      <div v-copy="item.php" class="icons__item" v-for="(item, key) in icons" v-bind:key="key">
+      <div v-takeaway="item.php" class="icons__item" v-for="(item, key) in icons" v-bind:key="key">
         <img class="icons__icon" :src="item.src">
         <span class="icons__name">{{item.name}}</span>
       </div>

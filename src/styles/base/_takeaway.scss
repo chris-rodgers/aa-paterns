@@ -1,4 +1,4 @@
-.copyable {
+.takeaway {
 	position: relative;
 	cursor: pointer;
 	&:hover {
@@ -11,7 +11,12 @@
 		right: 0;
 		display: none;
 		padding: 20px;
-		content: "Copy";
 		position: absolute;
+	}
+	&--copy:after{
+		content: "Copy";
+	}
+	&--download:after{
+		content: "Download";
 	}
 }
