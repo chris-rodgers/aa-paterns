@@ -1,5 +1,5 @@
 #app {
-	color: #2c3e50;
+	color: $type;
 }
 body {
 	margin: 0;
@@ -25,6 +25,9 @@ h4,
 h5,
 h6 {
 	margin: 0 0 2rem;
+}
+a{
+	color: $cobalt
 }
 * {
 	box-sizing: inherit;

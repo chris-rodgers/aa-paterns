@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .header {
-  border-bottom: 1px solid $gray-one;
+  border-bottom: 1px solid $zinc;
   margin-bottom: 40px;
   &__inner {
     width: 100%;
@@ -68,7 +68,7 @@ export default {
     height: 20px;
     margin: 20px;
     line {
-      stroke: $blue;
+      stroke: $cobalt;
     }
     @include breakpoint("mobile") {
       display: none;

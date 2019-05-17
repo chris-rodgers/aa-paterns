@@ -62,11 +62,11 @@ export default {
         background-color: #005ba9;
       }
       &:not(&--active):hover {
-        background-color: $gray-two;
+        background-color: $cadet;
       }
     }
     &:not(:last-child) {
-      border-bottom: 1px solid $gray-one;
+      border-bottom: 1px solid $zinc;
     }
   }
 }

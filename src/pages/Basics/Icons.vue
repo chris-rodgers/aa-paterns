@@ -22,7 +22,7 @@
       >
         <img class="icons__icon" :src="item.SVG">
         <span class="icons__name">{{item.name}}</span>
-        <!-- <a :href="item.src" download>download</a> -->
+        <a :href="item.SVG" download>download</a>
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@ export default {
     $margin-bottm: $global-spacing;
     flex-direction: column;
     text-align: center;
-    border-bottom: 1px solid $gray-one;
+    border-bottom: 1px solid $zinc;
     font-family: $monospace-font;
   }
   &__icon {
