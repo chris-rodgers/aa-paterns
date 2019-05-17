@@ -14,7 +14,7 @@
       </switch-container>
     </div>
     <div class="icons">
-      <div v-takeaway="item.php" class="icons__item" v-for="(item, key) in icons" v-bind:key="key">
+      <div v-takeaway:download="item.php" class="icons__item" v-for="(item, key) in icons" v-bind:key="key">
         <img class="icons__icon" :src="item.src">
         <span class="icons__name">{{item.name}}</span>
       </div>
@@ -67,12 +67,13 @@ export default {
 <style scoped lang="scss">
 .icons {
   display: grid;
-  grid-gap: $global-spacing;
+  grid-gap: 0 $global-spacing;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   &__item {
     display: flex;
     align-items: center;
-    padding: $global-spacing $global-spacing $global-spacing-large;
+    padding: $global-spacing-large $global-spacing;
+    $margin-bottm: $global-spacing;
     flex-direction: column;
     text-align: center;
     border-bottom: 1px solid $gray-one;

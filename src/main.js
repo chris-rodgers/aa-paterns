@@ -4,8 +4,7 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import Toasted from "vue-toasted";
-import { esacapeHtml, escapeHtml } from "./helpers";
-import takeaway from "./directives/takeway";
+import takeaway from "./directives/takeaway";
 
 Vue.config.productionTip = false;
 
