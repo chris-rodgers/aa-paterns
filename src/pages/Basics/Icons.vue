@@ -1,21 +1,8 @@
 <template>
   <div>
-    <!-- <h2>Spacing</h2> -->
-    <div class="text-right">
-      <switch-container>
-        <switch-item
-          :onChange="handleFormatChange"
-          name="format"
-          :value="format"
-          v-for="(method, format) in formats"
-          v-bind:key="format"
-          :checked="format === selected"
-        >{{format}}</switch-item>
-      </switch-container>
-    </div>
     <div class="icons">
       <div
-        v-takeaway="{value: item[selected], method: formats[selected]}"
+        v-takeaway="{value: item[selectedFormat], method: formats[selectedFormat]}"
         class="icons__item"
         v-for="(item, key) in icons"
         v-bind:key="key"
@@ -29,8 +16,6 @@
 </template>
 
 <script>
-import { SwitchContainer, SwitchItem } from "@/components/Switch";
-
 const req = require.context("../../assets/icons", true, /.svg$/);
 
 const icons = req.keys().reduce((a, b) => {
@@ -47,10 +32,9 @@ const icons = req.keys().reduce((a, b) => {
 
 export default {
   name: "Icons",
-  methods: {
-    handleFormatChange(x) {
-      this.selected = x[0];
-    }
+  props: ['selectedFormat'],
+  mounted() {
+    this.$emit("updateFormats", this.formats);
   },
   data() {
     return {
@@ -61,10 +45,6 @@ export default {
         Download: "download"
       }
     };
-  },
-  components: {
-    SwitchContainer,
-    SwitchItem
   }
 };
 </script>

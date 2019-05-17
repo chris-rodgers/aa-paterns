@@ -1,28 +1,16 @@
 <template>
   <div>
-    <div class="text-right">
-      <switch-container>
-        <switch-item
-          :onChange="handleFormatChange"
-          name="format"
-          :value="key"
-          v-for="(func, key) in formats"
-          v-bind:key="key"
-          :checked="key === selected"
-        >{{key}}</switch-item>
-      </switch-container>
-    </div>
-    <div v-for="(use, key) in sections" v-bind:key="key" class="colors">
+    <div v-if="selectedFormat in formats" v-for="(use, key) in sections" v-bind:key="key" class="colors">
       <h2 class="colors__heading">{{key}}</h2>
       <div
         v-for="(color, key) in use"
         v-bind:key="key"
         :style="{ backgroundColor: formats['HEX'](color), color: lightOrDark(formats['HEX'](color)) === 'dark' ? 'white' : 'black' }"
-        v-takeaway="formats[selected](color)"
+        v-takeaway="formats[selectedFormat](color)"
         class="colors__item"
       >
         <div class="colors__name">{{color}}</div>
-        <div class="colors__code">{{formats[selected](color)}}</div>
+        <div class="colors__code">{{formats[selectedFormat](color)}}</div>
       </div>
     </div>
   </div>
@@ -30,7 +18,6 @@
 
 <script>
 import { lightOrDark, hexToRgb } from "@/helpers";
-import { SwitchContainer, SwitchItem } from "@/components/Switch";
 import kebabCase from "lodash/kebabCase";
 
 const colors = {
@@ -69,20 +56,15 @@ const sections = {
 
 export default {
   name: "Colors",
-  components: {
-    SwitchContainer,
-    SwitchItem
-  },
-  methods: {
-    handleFormatChange(x) {
-      this.selected = x;
-    }
+  props: ["selectedFormat"],
+  mounted() {
+    this.$emit("updateFormats", this.formats);
   },
   data() {
     return {
       sections,
       lightOrDark,
-      selected: "HEX",
+      selected: null,
       formats: {
         HEX: function(value) {
           return colors[value];
@@ -101,7 +83,6 @@ export default {
     };
   }
 };
-console.log(this);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

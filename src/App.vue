@@ -3,7 +3,7 @@
     <header class="header">
       <div class="wrapper">
         <div class="header__inner">
-          <img class="header__logo" src="./assets/logo.svg">
+          <img class="header__logo" src="./assets/logo/logo.svg">
           <button class="header__button" v-on:click="open = !open">
             <burger class="header__burger"/>
           </button>
@@ -16,9 +16,21 @@
         <div class="main__title">
           <h1>{{ $route.name }}</h1>
         </div>
+        <div class="text-right">
+          <switch-container>
+            <switch-item
+              :onChange="handleFormatChange"
+              name="format"
+              :value="key"
+              v-for="(func, key) in formats"
+              v-bind:key="key"
+              :checked="key === selected"
+            >{{key}}</switch-item>
+          </switch-container>
+        </div>
         <div class="main__content">
           <transition name="fade">
-            <router-view/>
+            <router-view @updateFormats="updateFormats" :selectedFormat="selected"/>
           </transition>
         </div>
       </main>
@@ -32,8 +44,17 @@ import Burger from "./assets/icons/og-burger.svg?inline";
 
 export default {
   name: "App",
+  methods: {
+    updateFormats(value) {
+      this.formats = value;
+      this.selected = Object.keys(value)[0];
+    },
+    handleFormatChange(x) {
+      this.selected = x;
+    }
+  },
   data() {
-    return { open: false };
+    return { open: false, formats: {}, selected: null };
   },
   components: {
     AsideNav,

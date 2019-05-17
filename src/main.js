@@ -4,7 +4,8 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import Toasted from "vue-toasted";
-import takeaway from "./directives/takeaway";
+import takeaway from "@/directives/takeaway";
+import { SwitchContainer, SwitchItem } from "@/components/Switch";
 
 Vue.config.productionTip = false;
 
@@ -16,6 +17,10 @@ Vue.use(Toasted, {
 
 // Add takeaway to clipboard directive
 Vue.directive("takeaway", takeaway);
+
+// Switch component
+Vue.component('switch-container', SwitchContainer)
+Vue.component('switch-item', SwitchItem)
 
 /* eslint-disable no-new */
 new Vue({
