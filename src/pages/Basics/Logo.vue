@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img v-takeaway="{method: 'download', value: require('../../assets/logo/logo.svg')}" src="../../assets/logo/logo.svg">
+  <div class="logo" v-takeaway="{method: 'download', value: require('../../assets/logo/logo.svg')}">
+    <img class="logo__image" src="../../assets/logo/logo.svg">
   </div>
 </template>
 
@@ -21,6 +21,12 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss">
+.logo {
+  display: inline-block;
+  padding: $global-spacing-large $global-spacing-large $global-spacing-large 0;
+  &__image{
+    width: 300px;
+  }
+}
 </style>
