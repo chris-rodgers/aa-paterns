@@ -55,14 +55,12 @@ export default SwitchContainer;
   border-radius: $global-radius;
   padding: $global-spacing-small;
   background: #eeeeee;
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
+  text-align: center;
   &__label {
-    float: left;
-
+    flex: 1;
     cursor: pointer;
-    &:not(:last-child) {
-      margin-right: $global-spacing-small;
-    }
   }
   &__text {
     padding: $global-spacing-small $global-spacing-medium;

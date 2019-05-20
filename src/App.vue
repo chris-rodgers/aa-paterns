@@ -28,10 +28,15 @@
             >{{key}}</switch-item>
           </switch-container>
         </div>
+
         <div class="main__content">
-          <transition name="fade">
-            <router-view @updateFormats="updateFormats" :selectedFormat="selected"/>
-          </transition>
+          <transition-group name="fade">
+            <div class="sizing" v-if="sizing" key="sizing">
+              <h3>Sizing</h3>
+              <img class="sizing__image" :src="sizing">
+            </div>
+            <router-view @updateFormats="updateFormats" :selectedFormat="selected" key="router"/>
+          </transition-group>
         </div>
       </main>
     </div>
@@ -54,8 +59,15 @@ export default {
       console.log(x);
     }
   },
+  beforeUpdate() {
+    try {
+      this.sizing = require(`./assets/banners/${this.$route.name}.svg`);
+    } catch (e) {
+      this.sizing = null;
+    }
+  },
   data() {
-    return { open: false, formats: {}, selected: null };
+    return { open: false, formats: {}, selected: null, sizing: null };
   },
   components: {
     AsideNav,
@@ -129,6 +141,15 @@ export default {
   }
   &__content {
     position: relative;
+  }
+}
+
+.sizing {
+  border-bottom: 1px solid $zinc;
+  padding-bottom: $global-spacing;
+  margin-bottom: $global-spacing;
+  &__image {
+    max-width: 300px;
   }
 }
 </style>
