@@ -32,7 +32,7 @@
         <div class="main__content">
           <transition-group name="fade">
             <div class="sizing" v-if="sizing" key="sizing">
-              <h3>Sizing</h3>
+              <h2>Sizing</h2>
               <img class="sizing__image" :src="sizing">
             </div>
             <router-view @updateFormats="updateFormats" :selectedFormat="selected" key="router"/>
@@ -59,13 +59,13 @@ export default {
       console.log(x);
     }
   },
-  beforeUpdate() {
+  beforeUpdate(x) {
     try {
       this.sizing = require(`./assets/banners/${this.$route.name}.svg`);
     } catch (e) {
       this.sizing = null;
     }
-  },
+console.log(x)  },
   data() {
     return { open: false, formats: {}, selected: null, sizing: null };
   },

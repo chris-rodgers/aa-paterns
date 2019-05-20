@@ -1,6 +1,12 @@
 <template>
-  <div class="logo" v-takeaway="{method: 'download', value: require('../../assets/logo/logo.svg')}">
-    <img class="logo__image" src="../../assets/logo/logo.svg">
+  <div>
+    <h2>Full Color</h2>
+    <div
+      class="logo"
+      v-takeaway="{method: 'download', value: require('../../assets/logo/logo.svg')}"
+    >
+      <img class="logo__image" src="../../assets/logo/logo.svg">
+    </div>
   </div>
 </template>
 
@@ -25,7 +31,7 @@ export default {
 .logo {
   display: inline-block;
   padding: $global-spacing-large $global-spacing-large $global-spacing-large 0;
-  &__image{
+  &__image {
     width: 300px;
   }
 }
