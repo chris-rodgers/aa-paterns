@@ -149,7 +149,7 @@ console.log(x)  },
   padding-bottom: $global-spacing;
   margin-bottom: $global-spacing;
   &__image {
-    max-width: 300px;
+    max-width: 500px;
   }
 }
 </style>
