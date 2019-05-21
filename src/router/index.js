@@ -3,6 +3,7 @@ import Router from "vue-router";
 import kebabCase from "lodash/kebabCase";
 import startCase from "lodash/startCase";
 
+const DEFAULT_TITLE = 'Alternative Airlines Patterns'
 export let links = {}
 let routes = [],
   req;
@@ -30,6 +31,9 @@ req.keys().forEach(fileName => {
   routes.push({
     path: path,
     name: title,
+    meta: {
+      title
+    },
     component: req(fileName).default
   });
 
@@ -42,6 +46,10 @@ req.keys().forEach(fileName => {
   });
 });
 
-export default new Router({
-  routes
+const router = new Router({routes})
+
+router.afterEach((to, from) => {
+  document.title = `${to.meta.title} | ${DEFAULT_TITLE}` || DEFAULT_TITLE;
 });
+
+export default router;
