@@ -62,7 +62,7 @@ export default {
     $margin-bottm: $global-spacing;
     flex-direction: column;
     text-align: center;
-    border-bottom: 1px solid $zinc;
+    border-bottom: 1px solid color(zinc);
     font-family: $monospace-font;
   }
   &__icon {

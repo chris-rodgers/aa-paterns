@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 605.5 223" style="enable-background:new 0 0 605.5 223;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2990E6;}
+	.st1{fill:none;stroke:#495662;stroke-miterlimit:10;}
+	.st2{fill:#495662;}
+	.st3{font-family:'Roboto-Regular';}
+	.st4{font-size:12px;}
+</style>
+<title>Asset 2</title>
+<path id="Path_2055" class="st0" d="M605.5,9V0h-10.4v3H309.7V0h-10.4v3H10.4V0H0v9h3.5v98H0v9h3.5v98H0v9h10.4v-3h288.8v3h10.4v-3
+	h285.4v3h10.4v-9h-4.6v-98h4.6v-9h-4.6V9H605.5z M598.5,107H595v9h3.5v98H595v4H309.7v-4h-10.4v4H10.4v-4H5.8v-98h4.6v-9H5.8V9h4.6
+	V5h288.8v4h10.4V5h285.4v4h3.5L598.5,107z"/>
+<g>
+	<path class="st1" d="M181.7,54.8h46.5c33.1,0,60,26.9,60,60v46.6H181.7V54.8z"/>
+	<path class="st1" d="M317.2,94.9h46.4c11,0,20,9,20,20v46.4h-66.4V94.9z"/>
+	<text transform="matrix(1 0 0 1 208.7184 180.68)" class="st2 st3 st4">Large 6px</text>
+	<text transform="matrix(1 0 0 1 324.2669 180.6799)" class="st2 st3 st4">Small 2px</text>
+</g>
+</svg>

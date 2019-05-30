@@ -7,29 +7,37 @@ $global-radius: 6px;
 $global-radius-small: 2px;
 
 $global-spacing-large: 48px;
-$global-spacing: 24px;
+$global-spacing: 20px;
 $global-spacing-medium: 12px;
 $global-spacing-small: 6px;
 
 $monospace-font: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono";
 
-$cloud: #6dcff6;
-$island: #2990e6;
-$cobalt: #005baa;
-$red: #be1e2d;
-$white: #ffffff;
-$type: #495662;
-$orange: #f79c34;
-$green: #7dc855;
-$yellow: #ffff00;
-$maroon: #af554c;
-$zinc: #eeeeee;
-$cadet: #e1e8ee;
-$alloy: #dddddd;
-$pigeon: #bdc6cf;
+$colors : (
+    cloud: #6dcff6,
+    island: #2990e6,
+    cobalt: #005baa,
+    red: #be1e2d,
+    white: #ffffff,
+    type: #495662,
+    orange: #f79c34,
+    green: #7dc855,
+    yellow: #ffff00,
+    maroon: #af554c,
+    zinc: #eeeeee,
+    cadet: #e1e8ee,
+    alloy: #dddddd,
+    pigeon: #bdc6cf
+);
+@each $key, $color in $colors {
+    $key: $color;
+}
 
 // Mixins
 @import "./mixins/breakpoints";
+
+// Functions
+@import "./functions/colors";
 
 // Helpers
 @import "./helpers/text-align";

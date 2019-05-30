@@ -78,7 +78,7 @@ console.log(x)  },
 
 <style lang="scss">
 .header {
-  border-bottom: 1px solid $zinc;
+  border-bottom: 1px solid color(zinc);
   margin-bottom: $global-spacing-large;
   &__inner {
     width: 100%;
@@ -102,7 +102,7 @@ console.log(x)  },
     height: $global-spacing;
     margin: $global-spacing-medium $global-spacing;
     line {
-      stroke: $cobalt;
+      stroke: color(cobalt);
     }
     @include breakpoint("mobile") {
       display: none;
@@ -145,7 +145,7 @@ console.log(x)  },
 }
 
 .sizing {
-  border-bottom: 1px solid $zinc;
+  border-bottom: 1px solid color(zinc);
   padding-bottom: $global-spacing;
   margin-bottom: $global-spacing;
   &__image {

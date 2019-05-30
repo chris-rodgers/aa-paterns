@@ -70,7 +70,7 @@ export default {
           return colors[value];
         },
         SCSS: function(value) {
-          return `$${kebabCase(value)}`;
+          return `color(${kebabCase(value)})`;
         },
         CSS: function(value) {
           return `var(--color-${kebabCase(value)})`;

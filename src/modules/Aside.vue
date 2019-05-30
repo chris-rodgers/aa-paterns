@@ -59,14 +59,14 @@ export default {
       margin: $global-spacing-small 0;
       &--active {
         color: white;
-        background-color: #005ba9;
+        background-color: color(cobalt);
       }
       &:not(&--active):hover {
-        background-color: $cadet;
+        background-color: color(cadet);
       }
     }
     &:not(:last-child) {
-      border-bottom: 1px solid $zinc;
+      border-bottom: 1px solid color(zinc);
     }
   }
 }
