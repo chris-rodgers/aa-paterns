@@ -1,9 +1,84 @@
-$sizes: ('small', 'medium', 'large');
-.button{
-    &--color{
+$button-sizes: (
+	small: (
+		font-size: 14px,
+		padding: 6px 9px
+	),
+	large: (
+		font-size: 18px,
+		padding: 18px 26px
+	)
+);
 
-    }
-    &--size{
+$button-colors: (
+	secondary: cobalt,
+	positive: green,
+	orange: orange,
+	white: white
+);
 
-    }
+$button-disabled-colors: (
+	secondary: cadet
+);
+
+@mixin button($color, $text-color: inherit) {
+	$button-color: color($color);
+	background: $button-color;
+	border-color: $button-color;
+	@if (contrast-checker($button-color, white)) {
+		color: white;
+	} @else {
+		color: $text-color;
+	}
+	&:hover:not([disabled]) {
+		background: darken($button-color, 10);
+		border-color: darken($button-color, 10);
+	}
+}
+
+.button {
+	cursor: pointer;
+	font-weight: 500;
+	border: 1px solid;
+	padding: 11px 16px;
+	display: inline-block;
+	border-radius: $global-radius;
+	margin-bottom: $global-spacing;
+	transition: background-color 0.25s ease, border-color 0.25s ease;
+	@include button("island");
+
+	&--color {
+		@each $name, $color in $button-colors {
+			&--#{$name} {
+				@include button($color);
+			}
+		}
+		&--white {
+			border-color: currentColor;
+			border-color: color("cadet");
+			font-weight: normal;
+		}
+	}
+
+	&--size {
+		@each $name, $size in $button-sizes {
+			&--#{$name} {
+				@each $key, $value in $size {
+					#{$key}: $value;
+				}
+			}
+		}
+	}
+
+	&--expanded {
+		width: 100%;
+	}
+
+	&[disabled] {
+		$disabled-color: transparentize(color(type), 0.4);
+		cursor: not-allowed;
+		@include button("alloy", $disabled-color);
+		&.button--color--secondary {
+			@include button("cadet", $disabled-color);
+		}
+	}
 }

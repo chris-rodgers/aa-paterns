@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div v-if="selectedFormat in formats" v-for="(use, key) in sections" v-bind:key="key" class="colors">
+    <div
+      v-if="selectedFormat in formats"
+      v-for="(use, key) in sections"
+      v-bind:key="key"
+      class="colors"
+    >
       <h2 class="colors__heading">{{key}}</h2>
       <div
         v-for="(color, key) in use"
@@ -9,7 +14,7 @@
         v-takeaway="formats[selectedFormat](color)"
         class="colors__item"
       >
-        <div class="colors__name">{{color}}</div>
+        <div class="colors__name">{{color | capitalize}}</div>
         <div class="colors__code">{{formats[selectedFormat](color)}}</div>
       </div>
     </div>
@@ -19,44 +24,36 @@
 <script>
 import { lightOrDark, hexToRgb } from "@/helpers";
 import kebabCase from "lodash/kebabCase";
+import { colors } from "@/styles/theme.json";
 
-const colors = {
-  Cloud: "#6dcff6", // Sky,
-  Island: "#2990e6", //Azure
-  Cobalt: "#005baa", // Cobalt
-  Red: "#be1e2d", // Volcano, Lava,
-  White: "#ffffff",
-  Type: "#495662", // Ash, Charcoal
-  Orange: "#f79c34", // Tiger
-  Green: "#7dc855", // Forest
-  Yellow: "#ffff00", // Sun
-  Maroon: "#af554c", // Mud
-  Zinc: "#eeeeee",
-  Cadet: "#e1e8ee",
-  Alloy: "#dddddd",
-  Pigeon: "#bdc6cf"
-};
 const sections = {
-  Logo: ["Cloud", "Cobalt", "Red"],
-  Type: ["Type", "Cobalt", "Island"],
-  Buttons: ["Orange", "Cobalt", "White"],
-  Special: ["Maroon", "Yellow", "Green"],
+  Logo: ["cloud", "cobalt", "red"],
+  Type: ["type", "cobalt", "island"],
+  Buttons: ["orange", "cobalt", "white"],
+  Special: ["maroon", "yellow", "green"],
   "UI Elements": [
-    "Island",
-    "Cobalt",
-    "White",
-    "Zinc",
-    "Cadet",
-    "Alloy",
-    "Pigeon",
-    "Orange",
-    "Green"
+    "island",
+    "cobalt",
+    "white",
+    "zinc",
+    "cadet",
+    "alloy",
+    "pigeon",
+    "orange",
+    "green"
   ]
 };
 
 export default {
   name: "Colors",
-  props: ["selectedFormat"],
+  props: ["selectedFormat", "theme"],
+  filters: {
+    capitalize: function(value) {
+      if (!value) return "";
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    }
+  },
   mounted() {
     this.$emit("updateFormats", this.formats);
   },
