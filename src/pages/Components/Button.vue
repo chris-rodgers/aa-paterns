@@ -60,25 +60,26 @@ export default {
 table {
   thead th {
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: $global-spacing;
   }
   tbody th {
-    padding-right: 2rem;
+    padding-right: $global-spacing;
   }
   .button {
     margin-bottom: 0;
   }
   td {
-    padding: 10px;
+    padding: 10px 30px;
   }
   th {
     text-align: left;
     font-weight: normal;
+    font-family: $monospace-font;
   }
 }
 .section {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: $global-spacing-large;
+  padding-bottom: $global-spacing-large;
   &:not(:last-child) {
     border-bottom: 1px solid color(zinc);
   }
