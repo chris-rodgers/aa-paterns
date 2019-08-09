@@ -1,5 +1,5 @@
 <template>
-  <h2>Hello World</h2>
+  <div class="radius">6px</div>
 </template>
 
 <script>
@@ -15,5 +15,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .radius{
+    border-radius: 6px;
+    padding: 20px;
+    background: #ddd;
+  }
 </style>
