@@ -1,12 +1,14 @@
 <template>
-  <div class="example-typography" v-if="selectedFormat in formats">
-    <h1>H1 ({{formats[selectedFormat](2.5)}})</h1>
-    <h2>H2 ({{formats[selectedFormat](2)}})</h2>
-    <h3>H3 ({{formats[selectedFormat](1.375)}})</h3>
-    <h4>H4 ({{formats[selectedFormat](1.125)}})</h4>
-    <h5>H5 ({{formats[selectedFormat](1)}})</h5>
-    <h6>H6 ({{formats[selectedFormat](0.875)}})</h6>
-    <p>p ({{formats[selectedFormat](1)}})</p>
+  <div>
+    <div class="example-typography" v-if="selectedFormat in formats">
+      <h1>H1 ({{formats[selectedFormat](2.5)}})</h1>
+      <h2>H2 ({{formats[selectedFormat](2)}})</h2>
+      <h3>H3 ({{formats[selectedFormat](1.375)}})</h3>
+      <h4>H4 ({{formats[selectedFormat](1.125)}})</h4>
+      <h5>H5 ({{formats[selectedFormat](1)}})</h5>
+      <h6>H6 ({{formats[selectedFormat](0.875)}})</h6>
+      <p>p ({{formats[selectedFormat](1)}})</p>
+    </div>
   </div>
 </template>
 
