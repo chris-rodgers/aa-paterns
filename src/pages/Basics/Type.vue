@@ -1,5 +1,5 @@
 <template>
-  <div class="example-typography">
+  <div class="example-typography" v-if="selectedFormat in formats">
     <h1>H1 ({{formats[selectedFormat](2.5)}})</h1>
     <h2>H2 ({{formats[selectedFormat](2)}})</h2>
     <h3>H3 ({{formats[selectedFormat](1.375)}})</h3>
