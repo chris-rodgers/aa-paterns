@@ -18,7 +18,7 @@
     "@vue/cli-plugin-pwa": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
     "@vue/eslint-config-prettier": "^4.0.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "node-sass-json-importer": "^4.1.0",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-svg": "^0.1.2",
